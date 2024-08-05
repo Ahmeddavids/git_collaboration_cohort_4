@@ -17,12 +17,12 @@ const userSchema = new mongoose.Schema({
     },
     email: {
         type: String,
-        // unique: true
+        unique: true
     },
     passWord: {
         type: String
     }
-});
+}, {timestamp: true});
 
 
 const userModel = mongoose.model("user", userSchema);
